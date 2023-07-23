@@ -8,7 +8,7 @@
 * 본인의 OS에 맞는 버전 다운로드 후 설치
 1. Nodejs 설치 <https://nodejs.org/en/download/>
 2. Visual Studio Code 설치 <https://code.visualstudio.com/download>
-3. Git 설치 [Download Pages](https://git-scm.com/downloads)
+3. Git 설치 <https://git-scm.com/downloads>
 4. MongoDB 설치 <https://www.mongodb.com/try/download/community>
   * C:\MongoDB 경로에 설치
 
