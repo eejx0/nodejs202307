@@ -1,6 +1,7 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const hellonode = require('./hellonode.js');
 
 const port = 8000;
 http.createServer(function(req, res){
@@ -34,7 +35,8 @@ function fileServe(req, res){
     if(err){
       console.error(err);
       res.writeHead(404);
-      res.end('<h1>' + req.url + ' file not found!!!</h1>');
+      console.log(hellonode.msg);
+      res.end('<h1>' + hellonode.hi(req.url) + ' file not found!!!</h1>');
     }else{
       res.writeHead(200);
       res.end(data);
