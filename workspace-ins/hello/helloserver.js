@@ -17,14 +17,26 @@ function fileServe(req, res){
   let filename = req.url.substring(1);
 
   // 동기 방식의 함수 호출
-  try{
-    let data = fs.readFileSync(filename);
-    res.writeHead(200);
-    res.end(data);
-  }catch(err){
-    console.error(err);
-    res.writeHead(404);
-    res.end('<h1>' + req.url + ' file not found!</h1>');
-  }
+  // try{
+  //   let data = fs.readFileSync(filename);
+  //   res.writeHead(200);
+  //   res.end(data);
+  // }catch(err){
+  //   console.error(err);
+  //   res.writeHead(404);
+  //   res.end('<h1>' + req.url + ' file not found!</h1>');
+  // }
+
+  // 비동기 방식의 함수 호출
+  fs.readFile(filename, function(err, data){
+    if(err){
+      console.error(err);
+      res.writeHead(404);
+      res.end('<h1>' + req.url + ' file not found!</h1>');
+    }else{
+      res.writeHead(200);
+      res.end(data);
+    }
+  });
 
 }
