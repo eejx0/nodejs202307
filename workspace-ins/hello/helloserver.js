@@ -1,5 +1,6 @@
 const http = require('node:http');
 const fs = require('node:fs');
+const path = require('node:path');
 
 const port = 8000;
 http.createServer(function(req, res){
@@ -15,6 +16,7 @@ http.createServer(function(req, res){
 
 function fileServe(req, res){
   let filename = req.url.substring(1);
+  filename = path.join(__dirname, filename);
 
   // 동기 방식의 함수 호출
   // try{

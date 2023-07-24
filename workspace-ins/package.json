@@ -1,5 +1,15 @@
 {
+  "name": "nodelab",
+  "version": "1.0.0",
+  "description": "nodejs 실습",
+  "main": "index.js",
+  "scripts": {
+    "start": "node hello/helloserver.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "node-static": "^0.7.11"
+    "node-static": "^0.7.11",
+    "tracer": "^1.1.6"
   }
 }
