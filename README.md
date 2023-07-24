@@ -10,6 +10,7 @@
 2. Visual Studio Code 설치 <https://code.visualstudio.com/download>
 3. Git 설치 <https://git-scm.com/downloads>
 4. MongoDB 설치 <https://www.mongodb.com/try/download/community>
+  * Mac OS 설치 방법: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
 
 ### Visual Studio Code 설정
 1. VSCode 실행
